@@ -1,5 +1,3 @@
-https://sebastianborter.github.io/KiWeb-Plakat/
-
 [Plakat Projekt](Plakat_Projekt/MeinPlakat.html){:target="_blank"}
 
 [Konzept Plakat](Plakat_Projekt/Konzept_Plakat.pdf){:target="_blank"}
