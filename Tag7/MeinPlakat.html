@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konzertplakat</title>
+    <link rel="stylesheet" href="MeinPlakat.css">
+</head>
+
+<body>
+    <divt id="plakat">
+        <div class="titel" id="titel">
+            <h1>the&nbsp;stooges</h1>
+        </div>
+
+        <div class="img1" id="element1">
+            <img src="Element1.svg">
+        </div>
+        <div class="img2" id="element2">
+            <img src="Element2.svg">
+        </div>
+        </div>
+
+        <section class="konzertinfo">
+            <div class="tickets">
+                with the tubes
+                <br />
+                no one under 21 admitted
+                <br />
+                tickets 3.50
+            </div>
+
+            <div class="Zeit">
+                friday & saturday
+                <br />
+                january 11 and 12 1974
+                <br />
+                8 pm to 2 am
+            </div>
+
+            <div class="Ort">
+                at bimbo's
+                <br />
+                1025 columbus ave.
+                <br />
+                san fransisco, ca
+            </div>
+        </section>
+
+        <script>
+            window.addEventListener('scroll', function () {
+                var title = document.getElementById('titel');
+                var element1 = document.getElementById('element1');
+                var element2 = document.getElementById('element2');
+
+                var scrollPos = window.scrollY;
+
+                // Ändere Opacity des Titels entsprechend der Scroll-Position
+                title.style.opacity = 100 - (scrollPos / 400); // Adjust the division factor to control the fade speed
+
+                // Verschiebe die Elemente entsprechend der Scroll-Position
+                if (scrollPos > 200) { // Adjust this threshold as needed
+                    element1.style.gridColumn = '1/2';
+                    element1.style.gridRow = '3/4';
+                    element2.style.gridColumn = '3/4';
+                    element2.style.gridRow = '1/2';
+                } else {
+                    // Zurücksetzen auf die ursprünglichen Positionen
+                    element1.style.gridColumn = '1/3';
+                    element1.style.gridRow = '2/4';
+                    element2.style.gridColumn = '2/4';
+                    element2.style.gridRow = '1/3';
+                }
+            });
+        </script>
+</body>
+
+</html>

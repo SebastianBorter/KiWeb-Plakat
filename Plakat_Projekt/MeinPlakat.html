@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konzertplakat</title>
+  <link rel="stylesheet" href="MeinPlakat.css">
+</head>
+
+<body>
+  <div id="plakat">
+    <div class="titel" id="titel">
+      <h1>the&nbsp;stooges</h1>
+    </div>
+
+    <div class="img1" id="element1">
+      <img src="Element1.svg">
+    </div>
+    <div class="img2" id="element2">
+      <img src="Element2.svg">
+    </div>
+  </div>
+
+  <section class="konzertinfo">
+    <div class="tickets">
+      with the tubes
+      <br />
+      no one under 21 admitted
+      <br />
+      tickets 3.50
+    </div>
+
+    <div class="Zeit">
+      friday & saturday
+      <br />
+      january 11 and 12 1974
+      <br />
+      8 pm to 2 am
+    </div>
+
+    <div class="Ort">
+      at bimbo's
+      <br />
+      1025 columbus ave.
+      <br />
+      san fransisco, ca
+    </div>
+  </section>
+
+  <script>
+    var blockScroll = false;
+    var scrollRange = 5;
+
+    window.addEventListener('scroll', function () {
+      var title = document.getElementById('titel');
+      var scrollPos = window.scrollY;
+
+      if (scrollPos > 400) {
+        document.body.classList.add('scrolled2');
+      } else if (scrollPos > 100) {
+        document.body.classList.add('scrolled');
+        document.body.classList.remove('scrolled2');
+      } else {
+        document.body.classList.remove('scrolled');
+        document.body.classList.remove('scrolled2');
+      }
+
+      
+     /* if (Math.abs(scrollPos - 220) <= scrollRange && !blockScroll) {
+        blockScroll = true;
+        setTimeout(function () {
+          blockScroll = false;
+        }, 500); 
+      }
+
+      
+      if (blockScroll) {
+        window.scrollTo(0, 220); 
+      }
+
+      console.log(scrollPos);*/
+    });
+  </script>

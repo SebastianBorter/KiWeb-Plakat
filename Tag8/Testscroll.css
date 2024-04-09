@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 1000px;
+    /* Um Scrollen zu ermöglichen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    opacity: 0;
+    /* Startet versteckt */
+    transition: opacity 1s ease;
+    /* Übergangseffekt */
+    font-size: 48px;
+}
+
+.scrolled #title {
+    opacity: 1;
+    /* Wird sichtbar beim Scrollen */
+}

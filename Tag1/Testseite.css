@@ -1,0 +1,54 @@
+@font-face {
+    font-family: ‚Roboto‘;
+    src: url(Roboto-Medium.woff2);
+}
+
+
+
+
+body {
+    background-color: #e62085;
+
+}
+
+h1 {
+    font-family: "Roboto";
+    font-weight: 600;
+    color: #000000;
+    font-size: 12vw;
+    padding-left: 100px;
+    padding-top: 500px;
+}
+
+
+p {
+    margin-left: 100PX;
+    margin-right: 100px;
+
+
+
+
+
+
+    .eins {
+        border-style: hidden;
+        padding-left: 100px;
+        padding-right: 400px;
+        font-family: "Roboto";
+    }
+
+    .zwei {
+        border-style: hidden;
+        padding-left: 200px;
+        padding-right: 300px;
+        font-family: 'Roboto';
+    }
+
+    .drei {
+        border-style: hidden;
+        padding-left: 300px;
+        padding-right: 200px;
+        font-family: 'Roboto';
+
+    }
+}

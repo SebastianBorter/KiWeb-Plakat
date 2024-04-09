@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konzertplakat</title>
+    <link rel="stylesheet" href="MeinPlakat2.css">
+    <style>
+        .img1 img,
+        .img2 img {
+            transition: transform 5s ease;
+            /* Übergang für Transformationen hinzugefügt */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="plakat">
+        <section class="titel">
+            <h1>the stooges</h1>
+        </section>
+
+        <div class="img1" id="element1" onmouseover="moveAndScaleElement('element1')">
+            <img src="Element1.svg">
+        </div>
+        <div class="img2" id="element2" onmouseover="moveAndScaleElement('element2')">
+            <img src="Element2.svg">
+        </div>
+    </div>
+
+    <section class="konzertinfo">
+        <div class="tickets">
+            with the tubes
+            <br />
+            no one under 21 admitted
+            <br />
+            tickets 3.50
+        </div>
+
+        <div class="Zeit">
+            friday & saturday
+            <br />
+            january 11 and 12 1974
+            <br />
+            8 pm to 2 am
+        </div>
+
+        <div class="Ort">
+            at bimbo's
+            <br />
+            1025 columbus ave.
+            <br />
+            san fransisco, ca
+        </div>
+    </section>
+
+    <script>
+        function moveAndScaleElement(elementId) {
+            const element = document.getElementById(elementId);
+            const newPositionX = Math.random() * 20 - 10; // Random X position between -10 and 10
+            const newPositionY = Math.random() * 20 - 10; // Random Y position between -10 and 10
+            const scaleValue = Math.random() * 0.5 + 0.5; // Random scale between 0.5 and 1.0
+            element.style.transform = `translate(${newPositionX}px, ${newPositionY}px) scale(${scaleValue})`;
+        }
+    </script>
+</body>
+
+</html>
